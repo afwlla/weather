@@ -43,6 +43,10 @@
   </div>
 </template>
 
+<script setup>
+import Map from '@/components/TheMap.vue'
+</script>
+
 <style lang="scss" scoped>
 @import '@/scss/main.scss';
 @import '@/scss/subview.scss';
