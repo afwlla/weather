@@ -60,6 +60,26 @@
   </div>
 </template>
 
+<script setup>
+import axios from 'axios'
+//https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API key}
+//"latlng": [37.5683, 126.9778]
+let initialLat = 37.5683
+let initialLon = 126.9778
+// const API_KEY = 'd915f0ff80584f2fb62adfc29e388b99'
+const API_KEY = '284bfdeb630520653864189833ba7c68'
+const a = async () => {
+  await axios
+    .get(
+      `https://api.openweathermap.org/data/2.5/onecall?lat=${initialLat}&lon=${initialLon}&exclude={part}&appid=${API_KEY}`
+    )
+    .then((res) => {
+      console.log(res)
+    })
+}
+a()
+</script>
+
 <style lang="scss" scoped>
 @import '@/scss/main.scss';
 @import '@/scss/mainview.scss';
